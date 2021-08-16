@@ -10,3 +10,7 @@
   1. repo `git clone`
   2. `npm install`
   3. `npm start`
+## 참고자료
+- [getTimezoneOffset](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset)
+- [Merge Sort](https://stackabuse.com/merge-sort-in-javascript/)
+- [toLocaleDateString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString)
