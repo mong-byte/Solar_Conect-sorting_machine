@@ -7,7 +7,8 @@
   - 데이터의 오름차순, 내림차순 구현
   - 내림차순 데이터의 시간차 출력 구현
 ## Test
-- [TEST링크](https://github.com/mong-byte/Solar_Conect-sorting_machine/blob/main/src/SortingMachine.test.js)
+- [TEST링크](https://github.com/mong-byte/Solar_Conect-sorting_machine/blob/main/src/SortingMachine.test.js)<br/>
+ ![TEST결과](https://user-images.githubusercontent.com/55486644/129573276-463c396c-6902-4ee9-be2c-0ec577d346a4.png)
   1. 오름차순, 내림차순에 대한 test 실행
     - `mergeSort`에 대하여 각각의 배열에 대한 오름차순 정렬, 내림차순 정렬의 test
   2. 숫자, 혹은 허용 문자(,.) 이외의 문자에 대한 예외처리
