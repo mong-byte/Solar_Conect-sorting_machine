@@ -1,5 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import GlobalStyles from 'styles/GlobalStyles';
+import SortingMachine from './SortingMachine';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <>
+    <GlobalStyles />
+    <SortingMachine />
+  </>,
+  document.getElementById('root')
+);
