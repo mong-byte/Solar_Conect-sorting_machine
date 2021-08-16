@@ -12,6 +12,12 @@ describe('ASC-TEST', () => {
   test('ASC-3', () => {
     expect(mergeSort([3, 5, 2, 4, 1])).toEqual([1, 2, 3, 4, 5]);
   });
+  test('ASC-4', () => {
+    expect(mergeSort([-1, -2, -3, -4, -5])).toEqual([-5, -4, -3, -2, -1]);
+  });
+  test('ASC-5', () => {
+    expect(mergeSort([1.1, 1, 1.5, 1.4])).toEqual([1, 1.1, 1.4, 1.5]);
+  });
 });
 
 describe('DESC-TEST', () => {
@@ -23,6 +29,16 @@ describe('DESC-TEST', () => {
   });
   test('DESC-3', () => {
     expect(mergeSort([3, 5, 2, 4, 1], ORDER.DESC)).toEqual([5, 4, 3, 2, 1]);
+  });
+  test('DESC-4', () => {
+    expect(mergeSort([-3, -5, -2, -4, -1], ORDER.DESC)).toEqual([
+      -1, -2, -3, -4, -5,
+    ]);
+  });
+  test('DESC-5', () => {
+    expect(mergeSort([1.1, 1, 1.5, 1.4], ORDER.DESC)).toEqual([
+      1.5, 1.4, 1.1, 1,
+    ]);
   });
 });
 
