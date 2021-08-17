@@ -6,8 +6,6 @@ const Timer = ({ location }) => {
   return <Wrapper>{createKRdate(location)}</Wrapper>;
 };
 
-export default Timer;
-
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -19,3 +17,5 @@ const Wrapper = styled.div`
   color: #fff;
   font-size: 25px;
 `;
+
+export default React.memo(Timer);

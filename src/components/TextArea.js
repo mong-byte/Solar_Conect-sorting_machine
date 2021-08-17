@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 
-const TextArea = ({ checkString, error }) => {
+const TextArea = (props, ref) => {
+  const { checkString, error } = props;
   return (
     <TextContainer>
-      <InputArea onChange={checkString} error={error} />
+      <InputArea onChange={checkString} error={error} ref={ref} />
       {error && <ErrorMessage>형식을 맞춰주세요</ErrorMessage>}
     </TextContainer>
   );
@@ -29,4 +30,4 @@ const ErrorMessage = styled.span`
   z-index: 99;
 `;
 
-export default TextArea;
+export default React.memo(forwardRef(TextArea));
