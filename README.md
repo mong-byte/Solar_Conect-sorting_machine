@@ -1,4 +1,4 @@
-# Solar_Conect-sorting_machine
+# Solar_Connect-sorting_machine
 ## [💙 과제 배포 링크](https://loving-mclean-bf35fd.netlify.app)
 ## 과제 기능 구현 목록
   - 타이머 기능 구현
