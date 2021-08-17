@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { stringValidator, mergeSort } from 'utils';
 import { Timer, ResultField, SubmitButton, TextArea } from 'components';
 import { ORDER } from 'utils/constants';
+import ResetButton from 'components/ResetButton';
 
 function SortingMachine() {
   const [checkedNumArr, setCheckedNumArr] = useState([]);
@@ -12,7 +13,17 @@ function SortingMachine() {
     desc: [],
   });
   const [isLoading, setIsLoading] = useState(false);
+  const inputRef = useRef(null);
   const { ASC, DESC } = ORDER;
+
+  const resetValue = () => {
+    inputRef.current.value = '';
+    setInputError(false);
+    setSortedData({
+      asc: [],
+      desc: [],
+    });
+  };
 
   const checkString = event => {
     setInputError(false);
@@ -41,8 +52,11 @@ function SortingMachine() {
   return (
     <Container>
       <Timer location="ko-KR" />
-      <TextArea checkString={checkString} error={inputError} />
-      <SubmitButton sortNumArr={sortNumArr} error={inputError} />
+      <TextArea checkString={checkString} error={inputError} ref={inputRef} />
+      <ButtonBox>
+        <SubmitButton sortNumArr={sortNumArr} error={inputError} />
+        <ResetButton resetValue={resetValue} />
+      </ButtonBox>
       <ResultField sortedData={sortedData.asc} />
       <ResultField isLoading={isLoading} sortedData={sortedData.desc} />
       <Timer location="en-US" />
@@ -60,6 +74,12 @@ const Container = styled.div`
     width: 500px;
     height: 200px;
   }
+`;
+
+const ButtonBox = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 export default SortingMachine;

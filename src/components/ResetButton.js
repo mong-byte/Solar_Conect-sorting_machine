@@ -1,15 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SubmitButton = ({ sortNumArr, error }) => {
-  return (
-    <SubmitBtn onClick={sortNumArr} disabled={error}>
-      시작 버튼
-    </SubmitBtn>
-  );
+const ResetButton = ({ resetValue }) => {
+  return <ResetBtn onClick={resetValue}>초기화</ResetBtn>;
 };
 
-const SubmitBtn = styled.button`
+const ResetBtn = styled.button`
   all: unset;
   margin-top: 30px;
   padding: 10px 20px;
@@ -24,4 +20,4 @@ const SubmitBtn = styled.button`
   }
 `;
 
-export default React.memo(SubmitButton);
+export default ResetButton;
