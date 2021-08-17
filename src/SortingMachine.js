@@ -1,9 +1,14 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { stringValidator, mergeSort } from 'utils';
-import { Timer, ResultField, SubmitButton, TextArea } from 'components';
+import {
+  Timer,
+  ResultField,
+  SubmitButton,
+  TextArea,
+  ResetButton,
+} from 'components';
 import { ORDER } from 'utils/constants';
-import ResetButton from 'components/ResetButton';
 
 function SortingMachine() {
   const [checkedNumArr, setCheckedNumArr] = useState([]);
