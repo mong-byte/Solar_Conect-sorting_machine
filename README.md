@@ -6,6 +6,9 @@
   - 숫자 혹은 문자(,.)를 제외한 문자 입력시 예외처리 구현
   - 데이터의 오름차순, 내림차순 구현
   - 내림차순 데이터의 시간차 출력 구현
+  - 추가기능 구현
+    - 로딩중일때 애니메이션 구현
+    - 초기화기능 구현
 ## Test
 - [TEST링크](https://github.com/mong-byte/Solar_Conect-sorting_machine/blob/main/src/SortingMachine.test.js)<br/>
  ![TEST결과](https://user-images.githubusercontent.com/55486644/129573276-463c396c-6902-4ee9-be2c-0ec577d346a4.png)
